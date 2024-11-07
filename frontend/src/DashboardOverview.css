@@ -1,0 +1,288 @@
+/* DashboardOverview.css */
+
+/* Overall layout */
+.dashboard-overview {
+  padding: 20px;
+  background-color: #f5f7fa; /* Light gray background for a clean look */
+  font-family: 'Arial', sans-serif; /* Base font */
+}
+
+/* Header styles */
+.dashboard-overview h2 {
+  color: #333; /* Darker text for better readability */
+  margin-bottom: 20px;
+  font-size: 2rem; /* Large font size for the header */
+  font-weight: 700; /* Bold text */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow for a modern look */
+}
+
+/* Grid layout */
+.dashboard-overview .grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .dashboard-overview .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens and up */
+  }
+}
+
+@media (min-width: 1024px) {
+  .dashboard-overview .grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens and up */
+  }
+}
+
+/* Card styles */
+.dashboard-overview .card {
+  background-color: #ffffff; /* White background for cards */
+  border: 1px solid #e2e8f0; /* Light border for subtle separation */
+  border-radius: 12px; /* Rounded corners for a modern look */
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Medium shadow for cards */
+  position: relative; /* Position relative for pseudo-elements */
+}
+
+/* Hover effects for cards */
+.dashboard-overview .card:hover {
+  transform: translateY(-8px); /* Slight lift on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.dashboard-overview .card .icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+.dashboard-overview .card .title {
+  font-size: 1rem;
+  color: #666;
+}
+
+.dashboard-overview .card .value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Icon colors */
+.dashboard-overview .text-blue-500 {
+  color: #3b82f6; /* Tailwind's blue-500 color */
+}
+
+.dashboard-overview .text-green-500 {
+  color: #10b981; /* Tailwind's green-500 color */
+}
+
+.dashboard-overview .text-yellow-500 {
+  color: #f59e0b; /* Tailwind's yellow-500 color */
+}
+
+/* Recent Activity section */
+.dashboard-overview .recent-activity {
+  margin-top: 32px; /* Consistent spacing from the top */
+}
+
+.dashboard-overview .recent-activity h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #333; /* Darker text for better readability */
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow for a modern look */
+}
+
+/* Chart container */
+.dashboard-overview .chart-container {
+  background-color: #ffffff; /* White background for chart container */
+  border-radius: 12px; /* Rounded corners for chart container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Medium shadow for chart container */
+  padding: 20px;
+}
+
+/* Chart styles */
+.dashboard-overview .chart {
+  width: 100%;
+  height: 300px; /* Fixed height for charts */
+  position: relative;
+}
+
+/* Additional charts */
+.dashboard-overview .line-chart {
+  height: 300px; /* Line chart height */
+}
+
+.dashboard-overview .pie-chart {
+  height: 300px; /* Pie chart height */
+}
+
+.dashboard-overview .bar-chart {
+  height: 300px; /* Bar chart height */
+}
+
+.dashboard-overview .doughnut-chart {
+  height: 300px; /* Doughnut chart height */
+}
+
+/* Button styles */
+.dashboard-overview .btn {
+  background-color: #3b82f6; /* Blue background for buttons */
+  color: #ffffff; /* White text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.dashboard-overview .btn:hover {
+  background-color: #2563eb; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.dashboard-overview .btn:disabled {
+  background-color: #e2e8f0; /* Light gray background for disabled state */
+  color: #9ca3af; /* Gray text */
+  cursor: not-allowed;
+}
+
+/* Form styles */
+.dashboard-overview .form-group {
+  margin-bottom: 20px;
+}
+
+.dashboard-overview .form-group label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.dashboard-overview .form-group input,
+.dashboard-overview .form-group select,
+.dashboard-overview .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.dashboard-overview .form-group input:focus,
+.dashboard-overview .form-group select:focus,
+.dashboard-overview .form-group textarea:focus {
+  border-color: #3b82f6; /* Blue border on focus */
+  outline: none;
+}
+
+/* Table styles */
+.dashboard-overview .table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dashboard-overview .table th,
+.dashboard-overview .table td {
+  border: 1px solid #e2e8f0;
+  padding: 12px;
+  text-align: left;
+}
+
+.dashboard-overview .table th {
+  background-color: #f9fafb; /* Light gray background for header */
+  color: #333;
+}
+
+.dashboard-overview .table tr:nth-child(even) {
+  background-color: #f1f5f9; /* Alternating row colors */
+}
+
+.dashboard-overview .table tr:hover {
+  background-color: #e2e8f0; /* Highlight row on hover */
+}
+
+/* Alerts */
+.dashboard-overview .alert {
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  color: #fff;
+  position: relative;
+}
+
+.dashboard-overview .alert-info {
+  background-color: #3b82f6; /* Blue background for info alerts */
+}
+
+.dashboard-overview .alert-success {
+  background-color: #10b981; /* Green background for success alerts */
+}
+
+.dashboard-overview .alert-warning {
+  background-color: #f59e0b; /* Yellow background for warning alerts */
+}
+
+.dashboard-overview .alert-error {
+  background-color: #ef4444; /* Red background for error alerts */
+}
+
+.dashboard-overview .alert-close {
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Loading spinner */
+.dashboard-overview .loading-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #3b82f6; /* Blue spinner */
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Tooltips */
+.dashboard-overview .tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.dashboard-overview .tooltip .tooltip-text {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position above the tooltip trigger */
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateY(10px); /* Initial position for animation */
+}
+
+.dashboard-overview .tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity:1
+}

@@ -1,0 +1,225 @@
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #50c878;
+  --secondary-color-dark: #27ae60;
+  --text-color: #0b0b0b;
+  --text-dark: #e0e0e0;
+
+  --text-light: #333333;
+  --sidebar-light: #e2e9eaac;
+  --card-light: #e2e9eaac;
+  --bs-card-color: #a82323; /* Default */
+  --primary-color-dark: #121212;
+  --background-dark: #121212;
+  --sidebar-dark:#1e1e1e;
+  --card-dark: #1e1e1e;
+}
+
+
+body {
+  background-color: var(--background-light);
+  color: var(--text-light);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.innovative-admin-dashboard {
+  min-height: 100vh;
+}
+
+.dashboard-sidebar {
+  background-color: var(--sidebar-light);
+  min-height: 100vh;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.dashboard-nav .nav-link-custom {
+  display: flex;
+  align-items: center;
+  color: var(--text-light);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.dashboard-nav .nav-link-custom:hover,
+.dashboard-nav .nav-link-custom.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.nav-icon {
+  margin-right: 0.5rem;
+}
+
+.dashboard-header {
+  padding: 1rem;
+  background-color: var(--card-light);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.content-area {
+  padding: 1rem;
+}
+
+.card {
+  background-color: var(--card-light);
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+  --bs-card-color: #e0e0e0; /* For dark mode */
+
+}
+
+.dark-mode .dashboard-sidebar {
+  background-color: var(--sidebar-dark);
+}
+
+.dark-mode .dashboard-title {
+  color: var(--secondary-color-dark);
+}
+
+.dark-mode .dashboard-nav .nav-link-custom {
+  color: var(--text-dark);
+}
+
+.dark-mode .dashboard-nav .nav-link-custom:hover,
+.dark-mode .dashboard-nav .nav-link-custom.active {
+  background-color: var(--secondary-color-dark);
+  color: white;
+}
+
+.dark-mode .dashboard-header {
+  background-color: var(--card-dark);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .card {
+  background-color: var(--card-dark);
+  color: var(--text-dark); /* Ensure text is light in dark mode */
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--card-background);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: var(--card-background);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--text-light);
+  border: none;
+  padding: 5px 10px;
+}
+
+.btn-ghost:hover {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+}
+
+.btn-secondary:hover {
+  opacity: 0.9;
+}
+
+.save-btn {
+  font-size: 16px;
+  padding: 12px 24px;
+}
+
+.extract-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.file-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.actions-section {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.extract-btn,
+.generate-btn {
+  flex: 1;
+  justify-content: center;
+}
+
+.generate-btn {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+}
+
+.generate-btn:hover {
+  opacity: 0.9;
+}
+
+
+
+@media (max-width: 767.98px) {
+  .dashboard-nav {
+    display: none;
+  }
+
+  .dashboard-nav.open {
+    display: flex;
+  }
+}

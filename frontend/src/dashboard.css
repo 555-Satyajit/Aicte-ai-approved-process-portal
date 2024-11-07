@@ -1,0 +1,374 @@
+/* EnhancedStatusChecker.css */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --error-color: #e74c3c;
+  --warning-color: #f39c12;
+  --text-color: #333;
+  --background-color: #ecf0f1;
+  --card-background: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.status-checker-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.status-checker-card {
+  background-color: var(--card-background);
+  border-radius: 12px;
+  box-shadow: 0 10px 20px var(--shadow-color);
+  padding: 40px;
+  width: 100%;
+  max-width: 700px;
+  transition: all 0.3s ease;
+}
+
+.status-checker-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px var(--shadow-color);
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.search-box {
+  display: flex;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+input {
+  flex-grow: 1;
+  padding: 15px 20px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+button {
+  padding: 15px 30px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.message i {
+  margin-right: 15px;
+  font-size: 20px;
+}
+
+.message.error {
+  background-color: #fdeaea;
+  color: var(--error-color);
+}
+
+.message.info {
+  background-color: #e8f4fd;
+  color: var(--primary-color);
+}
+
+.status-result {
+  background-color: #eafaf1;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.status-result h2 {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.status-result p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.status-result.approved {
+  background-color: #eafaf1;
+  color: #27ae60;
+}
+
+.status-result.rejected {
+  background-color: #fdeaea;
+  color: var(--error-color);
+}
+
+.status-result.pending {
+  background-color: #fef9e7;
+  color: var(--warning-color);
+}
+
+.recent-searches {
+  margin-top: 40px;
+}
+
+.recent-searches h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.recent-searches ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.recent-searches li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.recent-searches li:hover {
+  transform: translateX(5px);
+}
+
+.recent-searches li.approved {
+  background-color: #eafaf1;
+}
+
+.recent-searches li.rejected {
+  background-color: #fdeaea;
+}
+
+.recent-searches li.pending {
+  background-color: #fef9e7;
+}
+
+.doc-id {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.doc-status {
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.doc-status.approved {
+  background-color: #27ae60;
+  color: white;
+}
+
+.doc-status.rejected {
+  background-color: var(--error-color);
+  color: white;
+}
+
+.doc-status.pending {
+  background-color: var(--warning-color);
+  color: white;
+}
+
+.doc-time {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.export-button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.export-button:hover {
+  background-color: #27ae60;
+  transform: translateY(-2px);
+}
+
+.status-legend {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f7f9fa;
+  border-radius: 8px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.status-dot.approved {
+  background-color: #27ae60;
+}
+
+.status-dot.rejected {
+  background-color: var(--error-color);
+}
+
+.status-dot.pending {
+  background-color: var(--warning-color);
+}
+
+@media (max-width: 600px) {
+  .status-checker-card {
+    padding: 30px;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  input, button {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  input {
+    margin-bottom: 15px;
+  }
+
+  button {
+    margin-left: 0;
+  }
+
+  .recent-searches li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .doc-time {
+    margin-top: 8px;
+  }
+
+  .status-legend {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .legend-item {
+    margin-bottom: 10px;
+  }
+}
+
+/* Animations */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.search-box button:not(:disabled):hover {
+  animation: pulse 1s infinite;
+}
+
+/* Transitions */
+.status-result, .recent-searches li, .export-button {
+  transition: all 0.3s ease;
+}
+
+/* Hover effects */
+.status-result:hover, .recent-searches li:hover, .export-button:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Focus styles */
+button:focus, input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.4);
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

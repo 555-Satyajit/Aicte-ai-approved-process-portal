@@ -1,0 +1,150 @@
+.activity-log {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.activity-log-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.stat-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.stat-card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.stat-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-period {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.stat-count {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.recent-activities {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.recent-activities-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.activity-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-details {
+  margin-left: 15px;
+}
+
+.activity-action {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.activity-user,
+.activity-doc-id {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 3px;
+}
+
+.activity-timestamp {
+  font-size: 12px;
+  color: #999;
+}
+
+.icon-small {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.icon-large {
+  width: 36px;
+  height: 36px;
+}
+
+.icon-green { color: #10B981; }
+.icon-red { color: #EF4444; }
+.icon-yellow { color: #F59E0B; }
+.icon-blue { color: #3B82F6; }
+
+.border-green { border-left: 4px solid #10B981; }
+.border-red { border-left: 4px solid #EF4444; }
+.border-yellow { border-left: 4px solid #F59E0B; }
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.no-activities {
+  color: #666;
+  font-style: italic;
+}
